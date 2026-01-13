@@ -1,6 +1,6 @@
 import requests
 
-TMDB_API_KEY = ""
+TMDB_API_KEY = "789b5aae481f5d6911b1845871166668"
 
 def get_movie(title):
     url = (
@@ -21,7 +21,6 @@ def get_movie(title):
             "- Did you save the file before running it?\n\n"
             f"TMDB message: {data.get('status_message', 'Unknown error')}"
         )
-
     if "results" not in data:
         raise ValueError(
             "TMDB did not return movie search results.\n"
